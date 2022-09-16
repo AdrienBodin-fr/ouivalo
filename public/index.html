@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Formulaire Ouivalo</title>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/App.css">
+
+    </head>
+
+    <body>
+
+        <div id="navbar">
+            <h1>Formulaire Ouivalo</h1>
+        </div>
+
+        <div id="account_form">
+            <form action="https://script.google.com/macros/s/AKfycby-TJmFFUFTfiNUbMoSIZx8LVtiskQ-bUt4xO6hmrU0XQpJS8IPUBow/exec" method="post" id="CLE-TEST-IOT">
+                <label>Adresse e-mail de ta candidature :</label><br/>
+                <input type="email" name="email" id="id"  required>
+                <br/>
+
+                <label>Date date de l'essai :</label><br/>
+                <input type="date" name="date" value="" id="date"  required>
+                <br/>
+
+                <label>Url de ton repo Git à consulter hébergeant ton travail Exemple : “les-hameaux-bio-nantes” :</label><br/>
+                <input type="text" name="url" id="urlRelais"  required>
+                <br/>
+
+                <label>Un petit mot doux que tu as à nous faire passer :</label><br/>
+                <textarea type="text" name="text" id="message"></textarea>
+                <br/>
+
+                <button type="submit" name="submit" id="submit">Envoyer</button>
+            </form>
+        </div>
+
+    <script>
+        var form = document.getElementById('CLE-TEST-IOT');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method : "POST",
+                body : new FormData(document.getElementById("CLE-TEST-IOT")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                window.open('d.html', '_blank');
+            });
+        });
+    </script>
+
+    </body>
+</html>

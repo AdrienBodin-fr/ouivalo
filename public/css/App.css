@@ -1,0 +1,95 @@
+/*Polices*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+body{
+    background-color: white;
+}
+
+#navbar
+{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    padding: 0px 36px 0px 36px;
+}
+
+#navbar h1
+{
+    font-family: caveat;
+    color: rgb(47,186,136);
+    padding: 25px 36px 25px 36px;
+    margin: 0;
+}
+
+
+/*Formulaire Account*/
+#account_form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --text-align: center;
+    --height: 600px;
+    --width: 1000px;
+    background-color: rgb(236,246,229);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding:10px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+#account_form label
+{
+    padding: 0 0 20px 0;
+    text-align: center;
+    color: rgb(47,186,136);
+    font-weight: 700;
+}
+
+#account_form input
+{
+    --text-align: center;
+    width: 50%;
+    padding: 0 5px;
+    margin: 5px;
+    margin-right: 20%;
+    height: 40px;
+    font-size: 20px;
+    color: rgb(47,186,136);
+}
+
+#account_form textarea
+{
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    height: 200px;
+    font-size: 20px;
+    color: rgb(47,186,136);
+}
+
+#account_form button
+{
+    color: rgb(60,130,103);
+    background-color: rgb(244,228,30);
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    justify-content: center;
+    --position: relative;
+    width: 25%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 25px;
+}
+
+#account_form button:hover
+{
+    cursor: pointer;
+    background-color: rgb(245,241,156);
+}
+/*Fin Formulaire Account*/
