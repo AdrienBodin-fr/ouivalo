@@ -92,4 +92,9 @@ body{
     cursor: pointer;
     background-color: rgb(245,241,156);
 }
+
+#erreur
+{
+    color: red;
+}
 /*Fin Formulaire Account*/

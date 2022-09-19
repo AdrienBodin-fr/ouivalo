@@ -18,7 +18,7 @@
         </div>
 
         <div id="account_form">
-            <form action="https://script.google.com/macros/s/AKfycby-TJmFFUFTfiNUbMoSIZx8LVtiskQ-bUt4xO6hmrU0XQpJS8IPUBow/exec" method="post" id="CLE-TEST-IOT">
+            <form action="js/app.js" method="post" id="formulaire">
                 <label>Adresse e-mail de ta candidature :</label><br/>
                 <input type="email" name="email" id="id"  required>
                 <br/>
@@ -38,21 +38,7 @@
                 <button type="submit" name="submit" id="submit">Envoyer</button>
             </form>
         </div>
-
-    <script>
-        var form = document.getElementById('CLE-TEST-IOT');
-        form.addEventListener("submit", e => {
-            e.preventDefault();
-            fetch(form.action, {
-                method : "POST",
-                body : new FormData(document.getElementById("CLE-TEST-IOT")),
-            }).then(
-                response => response.json()
-            ).then((html) => {
-                window.open('d.html', '_blank');
-            });
-        });
-    </script>
-
+        <p id="erreur"></p>
+    <script src="js/app.js"></script>
     </body>
 </html>
