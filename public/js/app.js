@@ -1,4 +1,4 @@
-document.getElementById('formulaire').addEventListener("submit", function (e){
+document.getElementById('formulaire').addEventListener("submit", function(e){
 
     var erreur;
     const key = "CLE-TEST-IOT";
@@ -38,8 +38,10 @@ document.getElementById('formulaire').addEventListener("submit", function (e){
         //Envoie du formulaire
         var form = fetch("https://script.google.com/macros/s/AKfycby-TJmFFUFTfiNUbMoSIZx8LVtiskQ-bUt4xO6hmrU0XQpJS8IPUBow/exec", {
             method: "POST",
-            apiKey: key,
-            body: JSON.stringify(donnees),
+            body: JSON.stringify({
+                cle: key,
+                donnees
+            }),
             headers: {
                 "Content-Type" : "application/json"
             },
